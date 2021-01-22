@@ -1,3 +1,5 @@
+// https://github.com/SaddamHossainKnight/assignment-js
+
 // 01. Kilometer to Meter
 
 function kilometerToMeter(kilometer){
@@ -10,7 +12,7 @@ function kilometerToMeter(kilometer){
     }
 
 }
-var result = kilometerToMeter(-1); //Input your value here ..
+var result = kilometerToMeter(1); // Input your value here .
 console.log(result);
 
 
@@ -36,9 +38,11 @@ console.log(totalProductPrices);
 // 03. Hotel Cost
 
 function hotelCost(days){
+
     if(days < 0){
          return "Days must not be negative !";
     } else{
+
      var roomCost = 0;
      if(days <= 10){
  
@@ -63,7 +67,7 @@ function hotelCost(days){
     }
  }
  
- var totalCost = hotelCost(-1); // Input your value
+ var totalCost = hotelCost(1); // Input your value here.
  console.log(totalCost)
  
 
@@ -71,9 +75,13 @@ function hotelCost(days){
 
  function megaFriend(friendsName){
 
-    var nameLength = 0;
+    if(friendsName == ''){
+        return "Enter a valid Name.";
+    }else{
+
+        var nameLength = 0;
   
-    for ( var i = 0; i < friendsName.length; i++ ){
+    for (var i = 0; i < friendsName.length; i++){
 
       if ( friendsName[i].length > nameLength ){
         var nameLength = friendsName[i].length;
@@ -81,8 +89,9 @@ function hotelCost(days){
       }
     }
     return longestFriendName;
+    }
  }
 
-  var friendsName = ["knight","saddam","nafiz","doli","nazifa"];//Enter your friend list
+  var friendsName = ['rohim','korim','tomy','roy']; // Enter your friend list
   var megaFriendName = megaFriend(friendsName);
   console.log(megaFriendName);
